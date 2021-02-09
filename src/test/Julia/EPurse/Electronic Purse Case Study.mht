@@ -1,0 +1,437 @@
+From: <ÓÉ Microsoft Internet Explorer 5 ±£´æ>
+Subject: Electronic Purse Case Study
+Date: Tue, 30 Jun 2009 22:47:23 +0800
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www-sop.inria.fr/lemme/verificard/electronic_purse/
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.3350
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Electronic Purse Case Study</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; charset=3Dgb2312">
+<META content=3D"MSHTML 6.00.2900.3562" name=3DGENERATOR></HEAD>
+<BODY>
+<H1>Electronic Purse Case Study</H1>Below are the annotated versions of =
+the=20
+classes in the electronic purse case study, provides as the <A=20
+href=3D"http://www.gemplus.com/smart/r_d/publications/case-study/">Applet=
+=20
+Benchmark Kit</A> by <A =
+href=3D"http://www.gemplus.com/">Gemplus</A>.<BR>We have a=20
+paper describing the process to construct the annotations.=20
+<P><A =
+href=3D"ftp://ftp-sop.inria.fr/lemme/Marieke.Huisman/fme37.ps.gz">Formal =
+
+specification of Gemplus' electronic purse case study</A> <BR><A=20
+href=3D"http://www-sop.inria.fr/lemme/Nestor.Catano">N. =
+Cata&ntilde;o</A>, <A=20
+href=3D"http://www-sop.inria.fr/lemme/Marieke.Huisman">M. =
+Huisman</A><BR>In the=20
+proceedings of <EM>Formal Methods Europe (FME 2002)</EM>, to =
+appear.<BR>Number=20
+2391 of LNCS, pages 272-289. Springer-Verlag, 2002.<BR><FONT =
+size=3D-1>&copy;=20
+Springer-Verlag</FONT>=20
+<P>The annotations are constructed by <A=20
+href=3D"http://www-sop.inria.fr/lemme/Nestor.Catano">N=A8=A6stor =
+Cata&ntilde;o</A> and <A=20
+href=3D"http://www-sop.inria.fr/lemme/Marieke.Huisman">Marieke =
+Huisman</A>.=20
+<P>This work is done as part of the <A=20
+href=3D"http://www-sop.inria.fr/lemme/verificard">VerifiCard</A> project =
+at INRIA.=20
+
+<H3>Package <TT>Utils</TT></H3>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD>Filename </TD>
+    <TD>Remarks </TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/utils/A=
+nnee.java">Annee</A>=20
+    </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/utils/D=
+ecimal.java">Decimal</A>=20
+    </TD>
+    <TD vAlign=3Dtop>Post conditions of <TT>isGreaterThan</TT> and=20
+      <TT>isSmallerThan</TT> cannot be established, needs reformulation =
+of=20
+      postconditions of <TT>equal</TT><BR>Several postconditions =
+commented out,=20
+      because of simplify error </TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/utils/D=
+ecimalException.java">DecimalException</A>=20
+    </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/utils/J=
+our.java">Jour</A>=20
+    </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/utils/M=
+ois.java">Mois</A>=20
+    </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/utils/P=
+acapException.java">PacapException</A>=20
+    </TD>
+    <TD></TD></TR></TBODY></TABLE>
+<H3>Package <TT>Pacapinterfaces</TT></H3>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD>Filename </TD>
+    <TD>Remarks </TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/pacapin=
+terfaces/PurseLoyaltyInterface.java">PurseLoyaltyInterface</A>=20
+    </TD>
+    <TD></TD></TR><!-- <tr> --><!-- <td> --><!-- <A =
+HREF=3D"pacapinterfaces/LoyaltyLoyaltyInterface.java">LoyaltyLoyaltyInter=
+face</A> --><!-- </td> --><!-- <td> --><!-- - --><!-- </td> --><!-- =
+</tr> --><!-- <tr> --><!-- <td> --><!-- <A =
+HREF=3D"pacapinterfaces/LoyaltyPurseInterface.java">LoyaltyPurseInterface=
+</A> --><!-- </td> --><!-- <td> --><!-- - --><!-- </td> --><!-- </tr> =
+-->
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/pacapin=
+terfaces/TransactionInterface.java">TransactionInterface</A>=20
+    </TD>
+    <TD></TD></TR></TBODY></TABLE>
+<H3>Package <TT>Purse</TT></H3>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD>Filename </TD>
+    <TD>Remarks </TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/A=
+ccessCondition.java">AccessCondition</A>=20
+    </TD>
+    <TD>ESC/Java cannot establish that the invariant is preserved by =
+method=20
+      <TT>addCondition</TT> </TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/A=
+ccessConditionException.java">AccessConditionException</A>=20
+    </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/A=
+ccessControl.java">AccessControl</A>=20
+    </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/A=
+ccessControlTable.java">AccessControlTable</A>=20
+    </TD>
+    <TD>We can not fully specify the postcondition of the method=20
+      <TT>verify</TT> </TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/A=
+llowedLoyalty.java">AllowedLoyalty</A>=20
+    </TD>
+    <TD>Postcondition of <TT>delSaler</TT> can not be established by =
+ESC/Java=20
+    </TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/A=
+llowedLoyaltyException.java">AllowedLoyaltyException</A>=20
+    </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/C=
+urrencies.java">Currencies</A>=20
+    </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/D=
+ate.java">Date</A>=20
+    </TD>
+    <TD>Explicit assumption needed in method <TT>getDate</TT> on array =
+length=20
+      in JavaCard </TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/D=
+ateException.java">DateException</A>=20
+    </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/E=
+xchangeRecord.java">ExchangeRecord</A>=20
+    </TD>
+    <TD vAlign=3Dtop>- ESC/Java can not establish that=20
+      <TT>addExchangeSession</TT> preserves invariant<BR>- ESC/Java can =
+not=20
+      establish that precondition of <TT>clone</TT> is satisfied in=20
+      <TT>defrag</TT>, because we can not express that arrays are =
+referenced to=20
+      only once<BR>- ESC/Java can not establish that <TT>defrag</TT> =
+preserves=20
+      invariant<BR>- ESC/Java can not establish postconditions of=20
+      <TT>prevIndex</TT> and <TT>nextIndex</TT> </TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/E=
+xchangeSession.java">ExchangeSession</A>=20
+    </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/H=
+eure.java">Heure</A>=20
+    </TD>
+    <TD>Explicit assumption needed in method <TT>getHeure</TT> on offset =
+in=20
+      array </TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/H=
+eureException.java">HeureException</A>=20
+    </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/L=
+oyaltiesTable.java">LoyaltiesTable</A>=20
+    </TD>
+    <TD vAlign=3Dtop>- ESC/Java can not establish postcondition of=20
+      <TT>delLoyalty</TT><BR>- ESC/Java can not establish postcondition =
+of=20
+      <TT>getAllowedLoyalty</TT><BR>- ESC/Java can not establish =
+postcondition=20
+      of <TT>removeNotification</TT><BR>- ESC/Java can not establish=20
+      postcondition of <TT>contents</TT> </TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/L=
+oyaltiesTableException.java">LoyaltiesTableException</A>=20
+    </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/L=
+oyaltyInterfaceObject.java">LoyaltyInterfaceObject</A>=20
+    </TD>
+    <TD>Uses <A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/specs/C=
+ipher.spec">javacardx.crypto.Cipher.spec</A>=20
+      and <A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/specs/O=
+PSystem.spec">visa.openplatform.OPSystem.spec</A>=20
+    </TD></TR>
+  <TR>
+    <TD vAlign=3Dtop><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/P=
+acapCertificate.java">PacapCertificate</A>=20
+    </TD>
+    <TD vAlign=3Dtop>Light weight specification<BR>Assumptions needed =
+for=20
+      ESC/Java that casting an array length to a short preserves that =
+the value=20
+      is &gt;=3D 0 </TD></TR>
+  <TR>
+    <TD vAlign=3Dtop><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/P=
+acapCipher.java">PacapCipher</A>=20
+    </TD>
+    <TD>- Light weight specification <BR>- Uses <A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/specs/C=
+ipher.spec">javacardx.crypto.Cipher.spec</A><BR>-=20
+      Precondition of call to Util.arrayFillNonAtomic cannot be =
+established by=20
+      ESC/Java </TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/P=
+acapKey.java">PacapKey</A>=20
+    </TD>
+    <TD>Light weight specification </TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/P=
+acapRandom.java">PacapRandom</A>=20
+    </TD>
+    <TD>Light weight specification </TD></TR>
+  <TR>
+    <TD vAlign=3Dtop><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/P=
+acapSecureMessaging.java">PacapSecureMessaging</A>=20
+    </TD>
+    <TD vAlign=3Dtop>- Light weight specification<BR>- Assumptions =
+needed for=20
+      ESC/Java that casting an array length to a short preserves that =
+the value=20
+      is &gt;=3D 0 </TD></TR>
+  <TR>
+    <TD vAlign=3Dtop><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/P=
+acapSignature.java">PacapSignature</A>=20
+    </TD>
+    <TD vAlign=3Dtop>- Light weight specification<BR>- Preconditions of=20
+      <TT>Util.arrayFillNonAtomic</TT>, <TT>instance.sign</TT> and=20
+      <TT>instance.verify</TT> in methods <TT>sign</TT> and =
+<TT>verify</TT>=20
+      cannot be established by ESC/Java </TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/P=
+artnerID.java">PartnerID</A>=20
+    </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/P=
+urse.java">Purse</A>=20
+    </TD>
+    <TD>- Light weight specification<BR>- Uses <A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/specs/C=
+ipher.spec">javacardx.crypto.Cipher.spec</A>=20
+      and <A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/specs/O=
+PSystem.spec">visa.openplatform.OPSystem.spec</A>=20
+      - Several specifications not completely checked, because too much =
+time=20
+      required </TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/P=
+urseApplet.java">PurseApplet</A>=20
+    </TD>
+    <TD>- Light weight specification<BR>- Uses <A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/specs/O=
+PSystem.spec">visa.openplatform.OPSystem.spec</A>=20
+      - Several specifications not completely checked, because too much =
+time=20
+      required </TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/S=
+alerID.java">SalerID</A>=20
+    </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/S=
+ecurity.java">Security</A>=20
+    </TD>
+    <TD>- Light weight specification<BR>- Uses <A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/specs/C=
+ipher.spec">javacardx.crypto.Cipher.spec</A>=20
+      and <A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/specs/O=
+PSystem.spec">visa.openplatform.OPSystem.spec</A>=20
+      - Several specifications not completely checked, because too much =
+time=20
+      required </TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/T=
+ransaction.java">Transaction</A>=20
+    </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/T=
+ransactionInterfaceObject.java">TransactionInterfaceObject</A>=20
+    </TD>
+    <TD></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/purse/T=
+ransactionRecord.java">TransactionRecord</A>=20
+    </TD>
+    <TD vAlign=3Dtop>- ESC/Java can not establish that =
+<TT>addTransaction</TT>=20
+      preserves invariant<BR>- ESC/Java can not establish that =
+precondition of=20
+      <TT>clone</TT> is satisfied in <TT>defrag</TT>, because we can not =
+express=20
+      that arrays are referenced to only once<BR>- ESC/Java can not =
+establish=20
+      that <TT>defrag</TT> preserves invariant<BR>- ESC/Java can not =
+establish=20
+      postconditions of <TT>prevIndex</TT> and <TT>nextIndex</TT><BR>- =
+No=20
+      postcondition specified for <TT>getTransaction</TT> and=20
+      <TT>getNbTransactions</TT> </TD></TR></TBODY></TABLE>
+<HR>
+
+<ADDRESS><A href=3D"mailto:ncatano@sophia.inria.fr">N=A8=A6stor Catano =
+Collazos</A> and=20
+<A href=3D"mailto:mhuisman@sophia.inria.fr">Marieke =
+Huisman</A></ADDRESS><!-- Created: Mon Nov 12 14:05:50 MET 2001 --><!-- =
+hhmts start -->Last=20
+modified: Fri Jul 12 16:03:42 MEST 2002 <!-- hhmts end --></BODY></HTML>

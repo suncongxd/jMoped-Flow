@@ -1,0 +1,188 @@
+From: <ÓÉ Microsoft Internet Explorer 5 ±£´æ>
+Subject: Projet PACAP
+Date: Tue, 30 Jun 2009 22:37:59 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01C9F9D3.6B8035F0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.3350
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01C9F9D3.6B8035F0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://D:\DOWNLOADS\PACAP\index.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Projet PACAP</TITLE><LINK=20
+href=3D"file:///D:/DOWNLOADS/PACAP/style.css" type=3Dtext/css =
+rel=3DSTYLESHEET>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1"></META>
+<META content=3D"MSHTML 6.00.2900.3562" name=3DGENERATOR></HEAD>
+<BODY>
+<H1>PACAP project </H1>
+<DIV class=3Dtoc><STRONG>Content</STRONG>=20
+<OL>
+  <LI><A href=3D"file:///D:/DOWNLOADS/PACAP/index.html#resume">Project=20
+  overview</A>=20
+  <LI><A =
+href=3D"file:///D:/DOWNLOADS/PACAP/index.html#partic">Participants</A>=20
+  <LI><A href=3D"file:///D:/DOWNLOADS/PACAP/index.html#cas">Case =
+study</A>=20
+  <LI><A =
+href=3D"file:///D:/DOWNLOADS/PACAP/index.html#rapports">Reports, papers=20
+  and presentations</A> </LI></OL></DIV><A name=3Dresume>
+<H2>Project overview</H2>The goal of the project was to provide =
+techniques and=20
+tools enabling a smart card issuer to verify that a new applet securely=20
+interacts with already downloaded applets. A security policy has been =
+defined=20
+that associates levels to applet attributes and methods and defines =
+authorized=20
+flows between levels. We propose a technique based on mdeol checking to =
+verify=20
+that actual information flows between applets are authorized. The =
+approach is=20
+applied to a case study (an electronic purse running on Java enabled =
+smart=20
+cards). <A name=3Dpartic>
+<H2>Participants </H2>
+<UL>
+  <LI>Project partners :=20
+  <UL>
+    <LI><A href=3D"http://www.gemplus.com/">Gemplus</A>=20
+    <LI><A href=3D"http://www.cert.fr/">Centre d'=C9tude et de Recherche =
+de Toulouse=20
+    </A>de <A href=3D"http://www.onera.fr/">l'Office National d'=C9tude =
+et de=20
+    Recherche en A=E9ronautique</A>. </LI></UL>
+  <LI>Duration : 2 years from january 1999 to december 2000.=20
+  <LI>Supported by: minist=E8re de la recherche and STTC.=20
+  <LI>Gemplus : Thierry Bressure, Eric Bretagne, Pierre Girard, =
+Jean-Louis=20
+  Lanet, Abdellah El Marouani.=20
+  <LI>ONERA : Pierre Bieber, Jacques Cazin, Virginie Wiels, Guy Zanon.=20
+</LI></UL><A name=3Dcas>
+<H2>Case study: electronic purse</H2>See <A=20
+href=3D"http://www.gemplus.com/smart/r_d/publications/case-study/index.ht=
+ml">this=20
+web page </A>describing the case study (specifications, code and models=20
+available). <A name=3Drapports>
+<H2>Reports, papers and presentations</H2>
+<UL>
+  <LI>P.Bieber, J.Cazin, P.Girard, JL.Lanet, V.Wiels, G.Zanon, Checking =
+secure=20
+  interactions of smart card applets. Proceedings of Esorics 2000. To be =
+
+  published in the <A =
+href=3D"http://www.springer.de/comp/lncs/index.html">LNCS=20
+  serie </A>, Copyright Springer-Verlag. Paper <SMALL>[<A=20
+  href=3D"file:///D:/DOWNLOADS/PACAP/rapports-pres/esorics2000.ps">=20
+  ps</A>]</SMALL>.=20
+  <LI>P.Bieber, J.Cazin, A. El Marouani, P.Girard, JL.Lanet, V.Wiels, =
+G.Zanon,=20
+  The PACAP prototype: a tool for detecting Java card illegal flow. Java =
+Card=20
+  Forum 2000, September 2000, Cannes, France. Paper <SMALL>[<A=20
+  =
+href=3D"http://www.cert.fr/francais/deri/wiels/Publi/jcwshop.ps">ps</A>]<=
+/SMALL>=20
+
+  <LI>P.Bieber, J.Cazin, A. El Marouani, P.Girard, JL.Lanet, R. Muller, =
+V.Wiels,=20
+  G.Zanon, Detecting illegal information flow using abstract =
+interpretation and=20
+  model checking. Gemplus Developer Conference 2000, Juin 2000, =
+Montpellier,=20
+  France. Paper <SMALL>[<A=20
+  =
+href=3D"http://www.cert.fr/francais/deri/wiels/Publi/GDC2000.ps">ps</A>]<=
+/SMALL>=20
+
+  <LI>P.Bieber, J.Cazin, V.Wiels, G.Zanon, P.Girard, JL.Lanet, =
+Electronic Purse=20
+  Applet Certification: Extended abstract. Proceedings of the workshop =
+on secure=20
+  architectures and information flow, Royal Holloway, 1-3 decembre 99.=20
+  Electronic Notes in Theoretical Computer Science. Paper <SMALL>[<A=20
+  href=3D"http://www.elsevier.nl/locate/entcs/volume32.html"> =
+ps</A>]</SMALL>.=20
+  <LI>Electronic Purse Applet Certification. INRIA Javacard day, ENS, 8 =
+december=20
+  99 and workshop on secure architectures and information flow, Royal =
+Holloway,=20
+  1-3 decembre 99. Slides <SMALL>[<A=20
+  href=3D"file:///D:/DOWNLOADS/PACAP/rapports-pres/pacap1299.ppt">=20
+  ppt</A>]</SMALL>.=20
+  <LI>Pierre Girard, Jean-Louis Lanet, Java Card or How to Cope with the =
+New=20
+  Security Issues Raised by Open Cards? Gemplus Developer Conference 99, =
+June=20
+  21-22 1999, Paris, France. Paper <SMALL>[<A=20
+  href=3D"file:///D:/DOWNLOADS/PACAP/rapports-pres/GDC99.pdf">PDF, 140=20
+  Ko</A>]</SMALL> - Pr=E9sentation <SMALL>[<A=20
+  href=3D"file:///D:/DOWNLOADS/PACAP/rapports-pres/GDC99-pres.pdf">PDF, =
+3298 Ko=20
+  </A>]</SMALL>.=20
+  <LI>Thierry Bressure, Conception et impl=E9mentation d'applications =
+Java sur=20
+  carte =E0 puce, Rapport de DEA, 22 juin 1999. Rapport <SMALL><A=20
+  =
+href=3D"file:///D:/DOWNLOADS/PACAP/rapports-pres/DEA-Thierry-Bressure.pdf=
+">[PDF,=20
+  269 Ko]</A></SMALL>. Pr=E9sentation <SMALL><A=20
+  =
+href=3D"file:///D:/DOWNLOADS/PACAP/rapports-pres/DEA-Thierry-Bressure-pre=
+s.pdf">[PDF,=20
+  3291 Ko ]</A></SMALL>.=20
+  <LI>Thierry Bressure, PACAP : Impl=E9mentation du cas d'=E9tude. =
+Quarterly du=20
+  groupe cryptographie et s=E9curit=E9, 31 Mai 1999. <SMALL>[<A=20
+  =
+href=3D"file:///D:/DOWNLOADS/PACAP/rapports-pres/quarterly-secu.pdf">PDF,=
+ 2878=20
+  Ko</A>]</SMALL>=20
+  <LI>Pierre Girard and Jean Louis Lanet, "New security issues raised by =
+open=20
+  cards," <I>Information Security Technical Report</I>, 1999. To appear. =
+Paper=20
+  <A =
+href=3D"file:///D:/DOWNLOADS/PACAP/rapports-pres/ISTR99.pdf"><SMALL>[PDF,=
+ 104=20
+  Ko]</SMALL></A> - <A=20
+  href=3D"file:///D:/DOWNLOADS/PACAP/rapports-pres/ISTR99.bib">BibTeX =
+entry</A>.=20
+  <LI>Pierre Girard, <A=20
+  =
+href=3D"file:///D:/DOWNLOADS/PACAP/rapports-pres/USENIX99/index.html">"Wh=
+ich=20
+  security policy for multiapplication smart cards?,"</A> in <I>USENIX =
+Workshop=20
+  on Smartcard Technology</I>, May 10--11, 1999, Chicago, Illinois, USA, =
+pp.=20
+  21--28, May 1999. To appear. Paper <A=20
+  =
+href=3D"file:///D:/DOWNLOADS/PACAP/rapports-pres/USENIX99.pdf"><SMALL>[PD=
+F, 147=20
+  Ko ]</SMALL></A> - <A=20
+  href=3D"file:///D:/DOWNLOADS/PACAP/rapports-pres/USENIX99.bib">BibTeX =
+entry</A>.=20
+  </LI></UL></BODY></HTML>
+
+------=_NextPart_000_0000_01C9F9D3.6B8035F0
+Content-Type: text/css;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///D:/DOWNLOADS/PACAP/style.css
+
+DIV.toc {
+	BORDER-RIGHT: thin solid; PADDING-RIGHT: 1em; BORDER-TOP: thin solid; =
+PADDING-LEFT: 1em; BACKGROUND: #ddd; PADDING-BOTTOM: 1em; MARGIN: 1em =
+0px; BORDER-LEFT: thin solid; PADDING-TOP: 1em; BORDER-BOTTOM: thin =
+solid
+}
+
+------=_NextPart_000_0000_01C9F9D3.6B8035F0--

@@ -1,0 +1,309 @@
+From: <¨®¨¦ Windows Internet Explorer 8 ¡À¡ê¡ä?>
+Subject: ChAsE
+Date: Sat, 17 Apr 2010 15:12:47 +0800
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www-sop.inria.fr/lemme/verificard/modifSpec/
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5579
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>ChAsE</TITLE>
+<META content=3D"text/html; charset=3Diso-8859-1" =
+http-equiv=3DContent-Type>
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.18904"></HEAD>
+<BODY>
+<H1>ChAsE</H1>ChAsE, which is short for <I>Check Assignable =
+Expression</I> can=20
+be used for static checking of <A =
+href=3D"http://www.jmlspecs.org/">JML</A>'s=20
+assignable clauses. It has been developed by <A=20
+href=3D"http://www-sop.inria.fr/lemme/Nestor.Catano/index.html">N=E9stor =
+Cata=F1o</A>=20
+at <A href=3D"http://www-sop.inria.fr/">INRIA Sophia-Antipolis</A> as =
+part of the=20
+<A href=3D"http://www-sop.inria.fr/lemme/verificard/">Verificard</A> =
+project.=20
+<P>ChAsE allows to check whether the side-effects of a Java method are =
+correctly=20
+specified, and in particular whether a method is pure. The tool uses a =
+syntactic=20
+method to check assignable clauses, and it is neither sound nor =
+complete, but=20
+intended to be practical -- because it can find the most common errors =
+in=20
+assignable clauses very efficiently. ChAsE is an extension of <A=20
+href=3D"http://research.compaq.com/SRC/esc/">ESC/Java</A>, a static =
+checker for=20
+Java programs, which in its current state does not check assignable =
+clauses at=20
+all.=20
+<P>The current implementation of ChAsE can check assignable clauses =
+containing=20
+assignable expressions as described by the following grammar (model =
+variables=20
+are not handled). <PRE>&lt;Assignable-exp&gt; ::=3D =
+&lt;Identifier&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &lt;Identifier&gt;[Exp]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &lt;Identifier&gt;[Exp .. =
+Exp]&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &lt;Identifier&gt;[*]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | =
+\fields\_of(&lt;Field-exp&gt;)&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | \nothing&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | \everything&nbsp;
+
+&lt;Field-exp&gt; ::=3D &lt;Point-identif&gt;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp; | this&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp; | \reach(&lt;Point-identif&gt;)&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp; | reach(this)&nbsp;&nbsp;
+
+&lt;Point-identif&gt; ::=3D =
+&lt;Identifier&gt;.&lt;Point-identif&gt;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &lt;Identifier&gt;</PRE>ChAsE&nbsp;=20
+and the specifications we constructed for <I><A=20
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse">Formal=
+=20
+specification of Gemplus' electronic purse case study</A></I>&nbsp; can =
+be=20
+downloaded from <A=20
+href=3D"ftp://ftp-sop.inria.fr/lemme/Nestor.Catano/ChAsE.tar.gz">here.</A=
+> When=20
+you unzip and untar this file, you will find instructions in the file=20
+README<TT>.txt</TT>.=20
+<P>ChAsE and the underlying method will be described in the paper <I>A =
+static=20
+checker for JML's assignable clause</I>, by <A=20
+href=3D"http://www-sop.inria.fr/lemme/Nestor.Catano/index.html">N=E9stor =
+Cata=F1o</A>=20
+and <A href=3D"http://www-sop.inria.fr/lemme/Marieke.Huisman/">Marieke =
+Huisman</A>=20
+(manuscript).=20
+<H3>Questions</H3>If you have any questions concerning the use of ChAsE, =
+you can=20
+contact <A href=3D"mailto:Nestor.Catano@sophia.inria.fr">N=E9stor =
+Cata=F1o</A>.=20
+<H3>Example</H3>To illustrate the use of ChAsE, we have checked the =
+assignable=20
+clauses that we have developed in an earlier <A=20
+href=3D"http://www-sop.inria.fr/lemme/verificard/electronic_purse/index.h=
+tml">case=20
+study</A> on specification and static checking of an electronic purse =
+applet. In=20
+order to focus on the assignable clause, we have eliminated all other =
+parts of=20
+the specification. The assignable clauses that we initially had =
+forgotten to=20
+specify are marked with <TT>!!</TT> (see also the remarks).=20
+<H2>Package <TT>utils</TT></H2>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><B>Classname</B></TD>
+    <TD><B>Remarks</B></TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/utils/Annee.ja=
+va">Annee</A></TD>
+    <TD>1 side-effects free method&nbsp;</TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/utils/Jour.jav=
+a">Jour</A></TD>
+    <TD>1 side-effects free method&nbsp;</TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/utils/Mois.jav=
+a">Mois</A></TD>
+    <TD>1 side-effects free method&nbsp;</TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/utils/PacapExc=
+eption.java">PacapException</A></TD>
+    <TD>1 side-effects free method&nbsp;</TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/utils/DecimalE=
+xception.java">DecimalException</A></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/utils/Decimal.=
+java">Decimal</A></TD>
+    <TD>12 side-effects free methods, 9 specification problems=20
+  found&nbsp;</TD></TR></TBODY></TABLE>
+<H2>Package <TT>pacapinterfaces</TT></H2>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><B>Classname</B></TD>
+    <TD><B>Remarks</B></TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/pacapinterface=
+s/LoyaltyLoyaltyInterface.java">LoyaltyLoyaltyInterface</A></TD>
+    <TD>2 side-effects free methods&nbsp;</TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/pacapinterface=
+s/LoyaltyPurseInterface.java">LoyaltyPurseInterface</A></TD>
+    <TD>2 side-effects free methods&nbsp;</TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/pacapinterface=
+s/PurseLoyaltyInterface.java">PurseLoyaltyInterface</A></TD>
+    <TD>4 side-effects free methods&nbsp;</TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/pacapinterface=
+s/TransactionInterface.java">TransactionInterface</A></TD>
+    <TD>10 side-effects free methods&nbsp;</TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD></TR></TBODY></TABLE>
+<H2>Package <TT>purse</TT></H2>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><B>Classname</B></TD>
+    <TD><B>Remarks</B></TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/purse/DateExce=
+ption.java">DateException</A></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/purse/Date.jav=
+a">Date</A></TD>
+    <TD>5 side-effects free methods, 2 specification problems found in 2 =
+
+      methods&nbsp;</TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/purse/HeureExc=
+eption.java">HeureException</A></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/purse/Heure.ja=
+va">Heure</A></TD>
+    <TD>2 side-effects free methods, 2 specification problems found in 2 =
+
+      methods&nbsp;</TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/purse/PartnerI=
+D.java">PartnerID</A></TD>
+    <TD>1 side-effects free method&nbsp;</TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/purse/SalerID.=
+java">SalerID</A></TD>
+    <TD>1 side-effects free method, 4 specification problems found in 3=20
+    methods</TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/purse/Loyaltie=
+sTableException.java">LoyaltiesTableException</A></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/purse/Loyaltie=
+sTable.java">LoyaltiesTable</A></TD>
+    <TD>4 side-effects free methods&nbsp;</TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/purse/AllowedL=
+oyaltyException.java">AllowedLoyaltyException</A></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/purse/AllowedL=
+oyalty.java">AllowedLoyalty</A></TD>
+    <TD>6 side-effects free methods, 3 specification problems found in 3 =
+
+      methods</TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/purse/AccessCo=
+nditionException.java">AccessConditionException</A></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/purse/AccessCo=
+ndition.java">AccessCondition</A></TD>
+    <TD>4 side-effects free methods&nbsp;</TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/purse/AccessCo=
+ntrolTable.java">AccessControlTable</A></TD>
+    <TD>2 side-effects free methods&nbsp;</TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/purse/AccessCo=
+ntrol.java">AccessControl</A></TD>
+    <TD>1 side-effects free method&nbsp;</TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/purse/Currenci=
+es.java">Currencies</A></TD>
+    <TD>3 side-effects free methods&nbsp;</TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/purse/Exchange=
+Session.java">ExchangeSession</A></TD>
+    <TD>10 side-effects free methods, 7 specification problems found in =
+4=20
+      methods&nbsp;</TD></TR>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www-sop.inria.fr/lemme/verificard/modifSpec/purse/Exchange=
+Record.java">ExchangeRecord</A></TD>
+    <TD>5 side-effects free methods, 16 specification problems found in =
+2=20
+      methods</TD></TR></TBODY></TABLE></BODY></HTML>
